@@ -1,0 +1,80 @@
+[LESSON 94]
+
+Expression =  something that yields a value you could store in a constant / a variable / return.
+Eg. const maxDamage = // mode === 'ATTACK' ? ATTACK_VALUE : STRONG_ATTACK_VALUE; //  --> // expression //
+
+Every expression is also a statement...
+Eg. // const maxDamage =  mode === 'ATTACK' ? ATTACK_VALUE : STRONG_ATTACK_VALUE; //  --> // statement //
+
+BUT an if statement is not an expression because you can't use it in the places where you for example need a value.
+
+An if-statement can only be used in code like this 👇 you can't use it on the right side of the (=) sign.
+Eg. if (condition) {    = a statement but not an expression
+    XXX
+}
+
+Resource = https://stackoverflow.com/questions/12703214/javascript-difference-between-a-statement-and-an-expression
+
+[LESSON 95 - shorthands / tricks / shortcuts]
+
+!! this converts it to a real false/true value not a JavaScript truthy or falsey value.
+Eg. !!"" = false    (an empty string will return false)
+    !!1  = true    (1 or any other value will return true)
+
+Const userInput = '';
+const userName = userInput || 'Max';
+userName;
+= 'Max'
+const realUserInput = 'Manu';
+const realUserName = realUserInput || 'Max';
+= 'Manu'
+
+** An array is alwasy treated as a true value even if there is nothing inside.
+
+&& :
+- this will return the first value if it is false
+- but it will return the second value if it is true
+
+Eg. const isLoggedIn = true;
+const shoppingCart = isLoggedIn && ['Books'];
+shoppingCart;
+= ['Books']
+
+
+[LESSON 97 - "switch - case"]
+
+Can be used where if else statements are used especially if the === strict equality operator is used. 
+Makes it cleaner to read.
+
+[LESSON 99 - for loops]
+
+can increment in the body of the for loop 
+Eg. for (l;et i = 0; i > 0) {
+    i--;
+    console.log(i);
+}
+
+FOR-IN LOOPS - USED OR OBJECTS
+
+[LESSON 100 - "for-of" loop] -- CAN ONLY BE USED ON ARRAYS / strings
+
+NB! remember: We can dynamicaly access an element in an array with the square bracket notation.
+Eg. battleLog[0]; // this will access the zero index of that array.
+
+https://www.youtube.com/watch?v=NlagmmCwOU4&ab_channel=HiteshChoudhary
+--> VERY GOOD VIDEO ON FOR-OF AND FOR-IN LOOPS 😁
+
+[LESSON 103-104 - BREAK & CONTINUE] *
+
+CONTINUE - The current iteration is stopped/ skipped and the next iteration (of the same loop) starts.
+BREAK - Stops the entire loop execution immediately and moves on to code execution after the loop.
+
+
+[LESSON 108 - "try-catch" to handle errors]
+- There are errors (like network errors) which are beyond your control - handle them via try-catch to avoid runtime script crashes and possibly provide a fallback.
+
+What goes into the try {} block? 
+- The code that could throw an error.
+
+What goes into the catch {} block?
+- The error handling and fallback logic.
